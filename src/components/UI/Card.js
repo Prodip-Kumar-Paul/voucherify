@@ -11,7 +11,7 @@ const Card = (props) => {
       const response = await fetch("https://voucherify.herokuapp.com/", {
         method: "GET",
         headers: {
-          Origin: "https://voucherify.netlify.app, http://localhost:3000",
+          Origin: "https://voucherify.netlify.app/",
         },
       });
       if (response.status !== 200) {
