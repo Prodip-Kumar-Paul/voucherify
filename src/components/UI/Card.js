@@ -8,7 +8,12 @@ const Card = (props) => {
   const submitHandler = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch("https://voucherify.herokuapp.com/");
+      const response = await fetch("https://voucherify.herokuapp.com/", {
+        method: "GET",
+        headers: {
+          Origin: "http://localhost:3000",
+        },
+      });
       if (response.status !== 200) {
         throw new Error("something went wrong");
       }
