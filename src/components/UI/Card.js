@@ -3,7 +3,6 @@ import classes from "./Card.module.css";
 
 const Card = (props) => {
   let res;
-  // const nameInputRef = useRef();
   const [code, setCode] = useState("");
   const [error, setError] = useState(false);
   const submitHandler = async (event) => {
@@ -37,7 +36,7 @@ const Card = (props) => {
   );
   return (
     <form onSubmit={submitHandler} className={classes.card}>
-      {error === false ? <div>{props.children}</div> : <p>{error}</p>}{" "}
+      {error === false ? <div>{props.children}</div> : <p>{error}</p>}
       {code.length === 0 ? "" : <div>{content}</div>}
     </form>
   );
