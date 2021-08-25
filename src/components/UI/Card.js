@@ -10,8 +10,10 @@ const Card = (props) => {
     try {
       const response = await fetch("https://voucherify.herokuapp.com/", {
         method: "GET",
+        "Access-Control-Allow-Origin":
+          "https://voucherify.netlify.app/, http://localhost:3000",
         headers: {
-          origin: "http://localhost:3000",
+          Origin: "http://localhost:3000",
           "Content-Type": "application/json",
         },
       });
