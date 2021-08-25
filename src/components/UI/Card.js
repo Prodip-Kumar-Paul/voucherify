@@ -12,6 +12,7 @@ const Card = (props) => {
         method: "GET",
         headers: {
           Origin: "https://voucherify.netlify.app/",
+          "Content-Type": "application/json",
         },
       });
       if (response.status !== 200) {
